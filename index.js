@@ -22,8 +22,6 @@ const formatNumber = num => {
   }
   return newNumber.reverse().join("");
 };
-console.log(formatNumber(10000));
-
 module.exports = formatus = {
   kelvinToFehrenheit: kelvinToFehrenheit,
   kelvinToCelcius: kelvinToCelcius,
