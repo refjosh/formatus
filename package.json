@@ -1,0 +1,25 @@
+{
+  "name": "formatus",
+  "version": "1.0.0",
+  "description": "Formatus is for proper string formatting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshtru/formatus.git"
+  },
+  "keywords": [
+    "format",
+    "formatter",
+    "string",
+    "javascript"
+  ],
+  "author": "Joshua Okoro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshtru/formatus/issues"
+  },
+  "homepage": "https://github.com/joshtru/formatus#readme"
+}
