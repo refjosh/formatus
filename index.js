@@ -1,6 +1,2 @@
-module.exports = temperature = require("./temperature/temperature");
-module.exports = formatus = {
-  kelvinToFehrenheit: kelvinToFehrenheit,
-  kelvinToCelcius: kelvinToCelcius,
-  formatNumber: formatNumber
-};
+module.exports = require("./formatus/temperature/temperature");
+module.exports = require("./formatus/numbers/numbers");
