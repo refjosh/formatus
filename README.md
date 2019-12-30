@@ -1,6 +1,21 @@
-# formatus v1.0.0
+# formatus
 
-The formatus library exported as [Node.js](https://nodejs.org/) modules
+![GitHub package.json version](https://img.shields.io/github/package-json/v/joshtru/formatus?color=red)
+![npm](https://img.shields.io/npm/dw/formatus)
+![GitHub repo size](https://img.shields.io/github/repo-size/joshtru/formatus)
+![NPM](https://img.shields.io/npm/l/formatus)
+
+> Do more without doing much
+
+# Table of Contents
+
+1. [Installation](#Installation)
+2. [How to use](#how-to-use)
+
+- [For Temperature](#for-temperature)
+- [For Numbers](#for-numbers)
+
+3. [License](#License)
 
 # Installation
 
@@ -11,29 +26,47 @@ $ npm i formatus
 $ npm i --save formatus
 ```
 
-# Usage
+# How To Use
 
-In JavaScript file:
+For import the package into the JavaScript file:
 
 ```JavaScript
-// Load the package.
+// importing formatus.
 const formatus = require('formatus');
+// or
+const _ = require('formatus')
+// either way works
 ```
 
-## For kelvin To Celcius
+### For Temperature
+
+The 4 supported temperature scales are Celcius, Kelvin, Fehrenheit, and Rankine.
+
+Here is an example of how to convert between the 4
 
 ```JavaScript
-const value = formatus.kelvinToCelcius(numberhere)
+// From Kelvin to Celcius
+const kelvin = 200;
+kelvin.kelvinToCelcius();
+// -73.15
 ```
 
-## For kelvin To Fehrenheit
+Pls note: The value returned always a string
+By default, the number of digit after the decimal point is always 2.
+
+You can specify how many numbers you want by passing a the into the function;
 
 ```JavaScript
-const value = formatus.kelvinToFehrenheit(numberhere)
+// From Kelvin to Celcius
+const kelvin = 200;
+// One decimal number
+kelvin.kelvinToCelcius(1);
+// -73.1
+// Whole number
+kelvin.kelvinToCelcius(0);
+// -73
 ```
 
-## For number formatting
+# License
 
-```JavaScript
-const value = formatus.formatNumber(numberhere)
-```
+MIT
