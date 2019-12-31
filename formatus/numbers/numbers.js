@@ -18,8 +18,3 @@ module.exports = Number.prototype.withSuffix = function(fix) {
     return (number / 1e24).toFixed(fix) + "Y";
   else return (number / 1e24).toFixed(fix) + "Y+";
 };
-// arrayWithComma
-module.exports = Array.prototype.arrayWithComma = function() {
-  const array = this;
-  return array.map(number => number.toLocaleString("en"));
-};

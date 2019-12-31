@@ -46,21 +46,21 @@ module.exports = Number.prototype.fahrenheitToRankine = function(fix = 2) {
 
 // FUNCTION FOR CONVERTING CELSIUS
 // to Kelvin
-module.exports = Number.prototype.celciusToKelvin = function(fix = 2) {
+module.exports = Number.prototype.celsiusToKelvin = function(fix = 2) {
   if (fix < 0) fix = 0;
   const celcius = this;
   const convertedToKel = celcius + 273.15;
   return parseFloat(convertedToKel.toFixed(fix));
 };
 // to Fahrenheit
-module.exports = Number.prototype.celciusToFahrenheit = function(fix = 2) {
+module.exports = Number.prototype.celsiusToFahrenheit = function(fix = 2) {
   if (fix < 0) fix = 0;
   const celcius = this;
   const convertedToFeh = (celcius * 9) / 5 + 32;
   return parseFloat(convertedToFeh.toFixed(fix));
 };
 // to Rankine
-module.exports = Number.prototype.celciusToRankine = function(fix = 2) {
+module.exports = Number.prototype.celsiusToRankine = function(fix = 2) {
   if (fix < 0) fix = 0;
   const celcius = this;
   const convertedToRan = ((celcius + 273.15) * 9) / 5;
@@ -83,9 +83,9 @@ module.exports = Number.prototype.rankineToCelsius = function(fix = 2) {
   return parseFloat(convertedToCel.toFixed(fix));
 };
 // to Fahrenheit
-module.exports = Number.prototype.rankineToRankine = function(fix = 2) {
+module.exports = Number.prototype.rankineToFahrenheit = function(fix = 2) {
   if (fix < 0) fix = 0;
   const rankine = this;
-  const convertedToFeh = (rankine = 459.67);
+  const convertedToFeh = rankine - 459.67;
   return parseFloat(convertedToFeh.toFixed(fix));
 };
