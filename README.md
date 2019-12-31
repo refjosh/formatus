@@ -11,9 +11,10 @@
 
 1. [Why formatus](#)
 2. [Installation](#Installation)
-3. [Basic Usage](#how-to-use)
-   - [For Temperature](#for-temperature)
-   - [For Numbers](#for-numbers)
+3. [Basic Usage](#basic-usage)
+   - [On Numbers](#on-numbers)
+   - [On Array](#on-array)
+   - [On Temperature](#on-temperature)
 4. [License](#License)
 
 # Installation
@@ -29,7 +30,7 @@ $ npm install --save formatus
 
 There are snippets of code we keep writing everytime we want to create one tiny or huge app. Why keep repeating this snippets when you can get them all from one place? This is what formatus hopes to accomplish.
 
-# How To Use
+# Basic Usage
 
 First, import the package into the JavaScript file:
 
@@ -39,9 +40,60 @@ const formatus = require("formatus");
 // or
 const _ = require("formatus");
 // either way works
+
+// On Temperature
+const kelvin = 2000;
+
+kelcin.kelvinToCelcius();
+// result => -73.15
+
+// On Numbers
+const count = 500000;
+count.withSuffix();
+// result => 500K
+
+// On Array
+const arrayList = [7000, 900, 10000, 49300];
+
+list.arrayWithComma();
+// result => [ '7,000', '900', '10,000', '49,300' ]
 ```
 
-### For Temperature
+## On Numbers
+
+The functions from the numbers API are **prototypes of the Number data type** in JavaScript.
+The API functions will throw an error if used on value other than a number
+
+```js
+// First import formatus
+const _ = require("formatus");
+
+const count = 200000;
+
+count.withSuffix();
+// result => 200K
+```
+
+The return type is a **string**
+
+## On Array
+
+The functions from the array API are **prototypes of the Array data type** in JavaScript.
+The API functions will throw an error if used on value other than a array
+
+```js
+// First import formatus
+const _ = require("formatus");
+
+const list = [2000, 100, 50000, 59300];
+
+list.arrayWithComma();
+// result => [ '2,000', '100', '50,000', '59,300' ]
+```
+
+The return values the array are of a **string** data type
+
+## For Temperature
 
 The 4 supported temperature scales for conversion are **Celcius, Kelvin, Fehrenheit, and Rankine**.
 
