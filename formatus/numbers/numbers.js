@@ -1,21 +1,4 @@
 // FUNCTION TO FORMAT NUMBER
-// with comma
-module.exports = Number.prototype.withComma = function() {
-  const num = this;
-  if (num < 1000) return num.toString();
-  let value = num.toString().split("");
-  let count = 0;
-  let newNumber = [];
-  for (let i = value.length - 1; i >= 0; i--) {
-    if (count === 3) {
-      newNumber.push(",");
-      count = 0;
-    }
-    count += 1;
-    newNumber.push(value[i]);
-  }
-  return newNumber.reverse().join("");
-};
 // with suffix
 module.exports = Number.prototype.withSuffix = function(fix) {
   const number = this;
@@ -34,4 +17,9 @@ module.exports = Number.prototype.withSuffix = function(fix) {
   if (number >= 1e24 && number < 1e27)
     return (number / 1e24).toFixed(fix) + "Y";
   else return (number / 1e24).toFixed(fix) + "Y+";
+};
+// arrayWithComma
+module.exports = Array.prototype.arrayWithComma = function() {
+  const array = this;
+  return array.map(number => number.toLocaleString("en"));
 };
