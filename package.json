@@ -1,6 +1,6 @@
 {
   "name": "formatus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Formatus gives you more",
   "main": "index.js",
   "scripts": {

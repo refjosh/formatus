@@ -131,7 +131,7 @@ temp.kelvinToCelcius(0);
 // result => -73
 ```
 
-Also, checkout the documention on [Temperature API](./docs/temperature.md)
+Also, checkout the full documention on [Temperature API](./docs/temperature.md)
 
 # License
 
